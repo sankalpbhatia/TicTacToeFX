@@ -62,7 +62,7 @@ public class TicTacToe extends Application {
                     if(win('X'))
                         score = Integer.MAX_VALUE;
                     else
-                        score = eval(moves+1, 100, 'O');
+                        score = eval(moves+1, 1000000000, 'O');
                     if (score > best) {
                         best = score;
                         bestRow = i;
