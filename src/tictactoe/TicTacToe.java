@@ -201,6 +201,10 @@ public class TicTacToe extends Application {
                 this.board[i][j] = 'O';
                 moves++;
             }
+
+            else if(this.board[i][j]!=' '){
+                return;
+            }
             if (win('O')) {
                 System.out.println("O wins");
                 gameOn=false;

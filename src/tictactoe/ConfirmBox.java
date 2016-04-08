@@ -15,7 +15,6 @@ import java.io.IOException;
 public class ConfirmBox {
 
     static boolean answer;
-    ;
     private static Stage window;
 
     public  boolean display() throws IOException {
