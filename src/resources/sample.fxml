@@ -133,7 +133,7 @@
           <Menu mnemonicParsing="false" text="Help">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
-                  <MenuItem mnemonicParsing="false" text="How to Play" />
+                  <MenuItem mnemonicParsing="false" onAction="#ShowRules" text="How to Play" />
             </items>
           </Menu>
         </menus>

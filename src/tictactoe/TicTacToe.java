@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,11 +24,15 @@ public class TicTacToe extends Application {
     private static Scene scene;
     public char[][] board;
 
-    private static Stage stage;
+    private Stage stage;
     private boolean gameOn = true;
 
-    public static Stage getStage(){
+    public Stage getStage(){
         return stage;
+    }
+
+    public void setStage(Stage stage){
+        this.stage=stage;
     }
 
     public TicTacToe(){
@@ -259,6 +264,25 @@ public class TicTacToe extends Application {
         boolean result=cb.display();
         if(result==true)
             stage.close();
+    }
+
+    @FXML
+    public void ShowRules() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/rules.fxml"));
+        Parent root = loader.load();
+
+        GridPane gp = (GridPane) scene.getRoot();
+        gp.setConstraints(root,0,1);
+        gp.getChildren().add(1, root);
+    }
+
+    @FXML
+    public void BackFromRules() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/sample.fxml"));
+        scene.setRoot(root);
+        NewGame();
+
+
     }
 
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.TicTacToe">
+   <children>
+      <TextArea editable="false" prefHeight="276.0" prefWidth="600.0" text="RULES FOR TIC-TAC-TOE&#10;&#10;1. The game is played on a grid that's 3 squares by 3 squares.&#10;&#10;2. You are X, your friend (or the computer in this case) is O. Players take turns putting &#10;    &#10;    their marks in empty squares.&#10;&#10;3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the &#10;    winner.&#10;&#10;4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the &#10;    game ends in a tie.&#10;&#10;&#10;                              YOU KNOW THE RULES NOW. HAVE FUN :)" />
+      <HBox prefHeight="37.0" prefWidth="600.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BackFromRules" text="Back">
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
